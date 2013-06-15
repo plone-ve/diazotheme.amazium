@@ -1,0 +1,171 @@
+#stylized-form { float: right; }
+#portal-colophon { float: left; }
+#portal-siteactions { float: right; }
+#portal-siteactions a { margin-left: 12px; }
+#portal-siteactions a:first-child { margin-left: 0; }
+.portletCalendar .portletHeader { text-align: center; }
+#calendar-previous { float: left; }
+#calendar-next { float: right; }
+.hiddenStructure {
+    background: transparent;
+    border: none;
+    display: block;
+    height: 0.1em;
+    margin: -0.1em 0 0 -0.1em;
+    overflow: hidden;
+    padding: 0;
+    width: 0.1em;
+}
+
+img.amazium-logo {
+     height: auto;
+     margin: 16px 0px;
+     width: 360px;
+}
+
+a.navigation-btn {
+     display: none;
+     float: right;
+}
+
+a.navigation-btn img {
+     cursor: pointer;
+     float: right;
+     height: auto;
+     margin: 0px 0px 0px 16px;
+     padding: 0px;
+     width: 35px;
+}
+
+a.btn-download, .btn-download {
+     background: url("../images/btn-arrow.png") no-repeat scroll right center #000000;
+     border: 1px solid #000000;
+     color: #FFFFFF;
+     cursor: pointer;
+     display: inline-block;
+     float: right;
+     margin: 34px 0px 0px;
+     padding: 8px 28px 9px 12px;
+}
+
+a.btn-download:hover {
+     background: url("../images/btn-arrow.png") no-repeat scroll right center #000000;
+     border: 1px solid #000000;
+     color: #666666;
+     text-decoration: none;
+}
+
+.navigation {
+     height: auto;
+     overflow: hidden;
+     padding: 0px 0px 10px;
+}
+
+ul.nav {
+     border-bottom: 1px solid #333333;
+     float: left;
+     font-size: 12px;
+     list-style: none outside none;
+     margin: 16px 0px 40px;
+     padding: 0px;
+     text-align: left;
+     text-transform: uppercase;
+     width: 100%;
+}
+
+ul.nav li {
+     background-image: none;
+     display: block;
+     float: left;
+     margin: 0px 30px 0px 0px;
+     padding: 0px;
+     text-align: left;
+}
+
+ul.nav li a {
+     color: #333333;
+     line-height: 30px;
+     padding: 0px 0px 3px;
+     text-decoration: none;
+}
+
+ul.nav li a:hover, ul.nav li a.current {
+     border-bottom: 5px solid #333333;
+     color: #333333;
+     line-height: 30px;
+     padding: 0px 0px 3px;
+     text-decoration: none;
+}
+
+.box {
+     border: 3px dashed #999999;
+     padding: 15px 15px 5px;
+}
+
+.box img {
+     float: left;
+     height: auto;
+     margin: 0px 20px 20px 0px;
+     width: 180px;
+}
+
+.box a.btn, .box .btn {
+     background: url("../images/btn-arrow.png") no-repeat scroll right center #C53C54;
+     border: 1px solid #C53C54;
+     color: #FFFFFF;
+}
+
+.box a.btn:hover {
+     background: url("../images/btn-arrow.png") no-repeat scroll right center #C53C54;
+     border: 1px solid #C53C54;
+     color: #FFFFFF;
+}
+
+.top {
+     margin: 30px auto 0px;
+}
+
+.base {
+     margin: 0px auto 40px;
+}
+
+span.example {
+     background-color: #EEEEEE;
+     display: block;
+     margin-bottom: 5px;
+     padding: 5px 0px;
+     text-align: center;
+     width: 100%;
+}
+
+@media only screen and (min-width: 1200px) {
+  .example { margin: 0px; padding: 0px; }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  img.amazium-logo { margin: 16px 0px 0px; width: 300px; height: auto; }
+  a.btn-download, .btn-download { margin: 24px 0px 0px; }
+  ul.nav { font-size: 11px; }
+  ul.nav li { margin: 0px 18px 0px 0px; }
+  .box img { margin: 0px 10px 0px 0px; float: left; width: 120px; height: auto; }
+}
+
+@media only screen and (max-width: 767px) {
+  img.amazium-logo { margin: 6px 0px 16px; width: 216px; height: auto; }
+  a.navigation-btn { margin: 6px 0px 0px; display: inline-block; }
+  a.btn-download, .btn-download { margin: 0px; }
+  .navigation { margin: 0px auto; display: none; background: none repeat scroll 0% 0% #000000; width: 100%; }
+  ul.nav { margin: 16px 0px 40px; padding: 0px; font-size: 12px; list-style: none outside none; float: left; text-transform: uppercase; text-align: left; border-bottom: 1px solid #FFFFFF; width: 100%; }
+  ul.nav li { margin: 0px 30px 0px 0px; padding: 0px; display: block; text-align: left; float: left; }
+  ul.nav li a { padding: 0px 0px 3px; text-decoration: none; line-height: 30px; color: #FFFFFF; }
+  ul.nav li a:hover, ul.nav li a.current { padding: 0px 0px 3px; border-bottom: 5px solid #333333; text-decoration: none; line-height: 30px; color: #FFFFFF; }
+  .box img { margin: 0px 10px 0px 0px; float: left; width: 80px; height: auto; }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .example { margin: 0px; padding: 0px; }
+}
+
+@media not all {
+  .example { margin: 0px; padding: 0px; }
+}

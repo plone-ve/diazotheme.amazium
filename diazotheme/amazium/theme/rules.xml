@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+       xmlns:css="http://namespaces.plone.org/diazo/css"
+       xmlns:xhtml="http://www.w3.org/1999/xhtml"
+       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"    
+       xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <notheme if="not(/html/body/div[@id='visual-portal-wrapper'])"/>
+  <theme href="/++framework++amazium/index.html"/>
+
+  <!-- Head rules
+       ================================================================== -->
+  <after content="/html/head/title">
+    <script type="text/javascript">
+        var browser         = navigator.userAgent;
+        var browserRegex    = /(Android|BlackBerry|IEMobile|Nokia|iP(ad|hone|od)|Opera M(obi|ini))/;
+        var isMobile        = false;
+        if(browser.match(browserRegex)) {
+            isMobile            = true;
+            addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+            function hideURLbar(){
+                window.scrollTo(0,1);
+            }
+        }
+    </script>
+  </after>
+
+  <xi:include href="/++framework++amazium/rules/head/base.xml"/>
+  <after theme="/html/head/title">
+    <link href="/++theme++amazium-example/layout.css" rel="stylesheet"/>
+  </after>
+
+  <xi:include href="/++framework++amazium/rules/head/js.xml"/>
+
+  <after theme-children="/html/head">
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $().UItoTop({ easingType: 'easeOutQuart' });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".navigation-btn").click(function(){
+                $(".navigation").slideToggle('slow');
+            });
+        });
+    </script>
+  </after>
+
+  <drop theme="//comment()"/>
+  <drop theme="//link"/>
+  <drop theme="//script"/>
+  <drop theme="//meta"/>
+
+  <!-- Body rules
+       ================================================================== -->
+  <xi:include href="/++framework++amazium/rules/body/columns.xml"/>
+
+
+  <!-- Wrap -->
+  <replace content="//*[@id='visual-portal-wrapper']">
+    <div class="row">
+        <div class="grid_12">
+            <xsl:variable name="logo" select=".//a[@id='portal-logo']"/>
+            <a href="/">
+                <xsl:copy-of select="$logo/@*"/>
+                <img class="amazium-logo">
+                  <xsl:attribute name="src">/++framework++plone/img/black/logo-128.png</xsl:attribute>
+                  <xsl:attribute name="width">491</xsl:attribute>
+                  <xsl:attribute name="height">128</xsl:attribute>
+                  <xsl:copy-of select="$logo/img/@title"/>
+                  <xsl:copy-of select="$logo/img/@alt"/>
+                </img>
+            </a>
+            <a class="navigation-btn" href="#">
+                <img width="35" height="35" src="/++theme++amazium-example/icon-menu.png"/>
+            </a>
+            <div id="stylized-form">
+                <xsl:variable name="search" select=".//*[@id='portal-searchbox']"/>
+                <form>
+                    <xsl:copy-of select="$search/form/@*"/>
+                    <div class="wrapper-block">
+                        <label for="searchGadget">
+                            <xsl:value-of select="$search//label[@for='searchGadget']/text()"/>
+                        </label>
+                        <xsl:apply-templates select="$search//input[@id='searchGadget']"/>
+                    </div>
+                    <input class="submit btn-form" type="submit">
+                        <xsl:copy-of select="$search//input[@class='searchButton']/@value"/>
+                    </input>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="navigation">
+        <div class="row">
+            <div class="grid_12">   
+                <ul class="nav">
+                    <xsl:apply-templates select=".//*[@id='portal-globalnav']/li"/>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="grid_12">
+            <div class="row">
+                <div class="grid_12">
+                    <xsl:apply-templates select="./div[@id='portal-columns']"/>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="grid_12">
+                    <xsl:variable name="footer" select=".//*[@id='portal-footer']"/>
+                    <xsl:if test="$footer">
+                        <p id="portal-footer">
+                            <small>
+                                <xsl:apply-templates select="$footer/*"/>
+                            </small>
+                        </p>
+                    </xsl:if>
+                    <xsl:variable name="colophon" select=".//*[@id='portal-colophon']"/>
+                    <xsl:if test="$colophon">
+                        <p id="portal-colophon">
+                            <small>
+                                <xsl:apply-templates select="$colophon//a"/>
+                            </small>
+                        </p>
+                    </xsl:if>
+                    <xsl:variable name="siteactions" select=".//*[@id='portal-siteactions']"/>
+                    <xsl:if test="$siteactions">
+                        <p id="portal-siteactions">
+                            <small>
+                                <xsl:apply-templates select="$siteactions//a"/>
+                            </small>
+                        </p>
+                    </xsl:if>
+                    <xsl:apply-templates select=".//*[@id='portal-footer-wrapper']//script"/>
+                </div>
+            </div>
+        </div>
+    </div>
+  </replace>
+  <replace content="//*[@id='portal-globalnav']/li[@class='selected']/a">
+      <a class="current">
+          <xsl:copy-of select="./@href|./@title|./*|./text()"/>
+      </a>
+  </replace>
+  <drop content="//div[@id='portal-top']"/>
+
+
+  <!-- Place the content 
+       .................................................................. -->
+  <xi:include href="/++framework++plone/rules/content.xml"/>
+  
+</rules>
