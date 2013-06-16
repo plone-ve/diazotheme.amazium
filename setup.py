@@ -23,7 +23,7 @@ setup(name='diazotheme.amazium',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'diazo.framework.amazium',
+          'diazoframework.amazium',
       ],
       entry_points="""
       [z3c.autoinclude.plugin]
