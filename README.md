@@ -4,7 +4,7 @@ This package provides a diazo theme based on the
 [Amazium CSS framework](http://www.amazium.co.uk/). For documentation
 on the framework itself, check the website.
 
-This theme uses  
+The themes in this package use 
 [diazoframework.amazium](https://github.com/TH-code/diazoframework.amazium).
 
 For more information on:
