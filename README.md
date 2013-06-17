@@ -1,6 +1,6 @@
 Introduction
 ============
-This package provides a diazo theme based on the
+This package provides diazo themes based on the
 [Amazium CSS framework](http://www.amazium.co.uk/). For documentation
 on the framework itself, check the website.
 
