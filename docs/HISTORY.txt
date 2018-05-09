@@ -4,4 +4,6 @@ Changelog
 1.0dev (unreleased)
 -------------------
 
+- Changed the theme name prefix reference [macagua]
+
 - Initial release
