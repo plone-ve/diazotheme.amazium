@@ -27,7 +27,7 @@
 
   <xi:include href="/++framework++amazium/rules/head/base.xml"/>
   <after theme="/html/head/title">
-    <link href="/++theme++amazium-example/layout.css" rel="stylesheet"/>
+    <link href="/++theme++amazium/layout.css" rel="stylesheet"/>
   </after>
 
   <xi:include href="/++framework++amazium/rules/head/js.xml"/>
@@ -73,7 +73,7 @@
                 </img>
             </a>
             <a class="navigation-btn" href="#">
-                <img width="35" height="35" src="/++theme++amazium-example/icon-menu.png"/>
+                <img width="35" height="35" src="/++theme++amazium/icon-menu.png"/>
             </a>
             <div id="stylized-form">
                 <xsl:variable name="search" select=".//*[@id='portal-searchbox']"/>
