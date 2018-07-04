@@ -12,8 +12,8 @@ using `plone.app.theming`_.
 
 ``diazotheme.amazium`` package contains the following diazo implementations: 
 
-- ``Amazium Starter Theme``, is the Amazium starter theme on diazo based.
-- ``Amazium Theme``, a diazo theme based for Amazium.
+- **Amazium Starter Theme**, is the Amazium starter theme on diazo based.
+- **Amazium Theme**, a diazo theme based for Amazium.
 
 
 How to create a child theme
@@ -149,10 +149,15 @@ Resources
 This package is the parent of all Plone diazo themes and 
 provides rule that are practical to use in other diazo themes.
 
-The resources of this framework can be reached through 
-``/++theme++amazium`` and there are placed at 
-``diazotheme.amazium/diazotheme/amazium/`` directory with 
-following resources files:
+The resources of this framework can be reached through
+
+- **Amazium Starter Theme**
+    ``/++theme++amazium-starter``
+- **Amazium Theme**
+    ``/++theme++amazium``
+
+There are placed at ``diazotheme.amazium/diazotheme/amazium/`` directory 
+with following resources files:
 
 ::
       
