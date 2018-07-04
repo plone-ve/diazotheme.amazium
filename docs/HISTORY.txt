@@ -4,6 +4,8 @@ Changelog
 1.0dev (unreleased)
 -------------------
 
+- Updated the diazo amazium theme preview file [macagua]
+
 - Added improvements about README file [macagua]
 
 - Updated the diazo manifest file [macagua]
