@@ -30,7 +30,7 @@ The package way
 ^^^^^^^^^^^^^^^
 
 For this example, lets assume we are creating a package called
-diazotheme.newtheme and we will copy the 'starter' theme in this 
+``diazotheme.newtheme`` and we will copy the ``starter`` theme in this 
 package.
 
 1. Created the ``diazotheme.newtheme`` package (for instance through ``paster`` script).
@@ -60,12 +60,12 @@ package.
 The zip file way
 ^^^^^^^^^^^^^^^^
 
-Again, lets assume we use the 'theme' theme and we want to end up
-with the 'newtheme' name.
+Again, lets assume we use the ``theme`` theme and we want to end up
+with the ``newtheme`` name.
 
 1. Copy ``diazotheme.amazium/diazotheme/amazium/theme`` to your file system.
 
-2. Rename 'theme' to 'newtheme' (the folder name wil become the
+2. Rename ``theme`` to ``newtheme`` (the folder name will become the
    theme name in the theme panel)
 
 3. Change ``newtheme/manifest.cfg``
@@ -82,7 +82,7 @@ with the 'newtheme' name.
 4. Customize your theme.
 
 5. When you are finished customizing, create a zip archive of the 
-   'newtheme' folder.
+   ``newtheme`` folder.
 
 6. Upload the ``newtheme.zip`` in the plone theme panel.
 
@@ -160,7 +160,7 @@ There are placed at ``diazotheme.amazium/diazotheme/amazium/`` directory
 with following resources files:
 
 ::
-      
+
     _ starter
       Provides the resources from *Amazium Starter Theme*.
       _ manifest.cfg
