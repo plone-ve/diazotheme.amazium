@@ -149,25 +149,39 @@ Resources
 This package is the parent of all Plone diazo themes and 
 provides rule that are practical to use in other diazo themes.
 
-The resources of this framework can be reached through
 
-- **Amazium Starter Theme**
+Amazium Starter Theme
+---------------------
+
+The resources of this theme can be reached through
+
     ``/++theme++amazium-starter``
-- **Amazium Theme**
-    ``/++theme++amazium``
 
-There are placed at ``diazotheme.amazium/diazotheme/amazium/`` directory 
-with following resources files:
+There are placed at ``diazotheme.amazium/diazotheme/amazium/starter`` 
+directory with following resources files:
 
 ::
 
     _ starter
-      Provides the resources from *Amazium Starter Theme*.
+      Provides the resources from "Amazium Starter Theme".
       _ manifest.cfg
       _ rules.xml
-      
+
+
+Amazium Theme
+-------------
+
+The resources of this theme can be reached through
+
+    ``/++theme++amazium``
+
+There are placed at ``diazotheme.amazium/diazotheme/amazium/theme`` 
+directory with following resources files:
+
+::
+
     _ theme
-      Provides the resources from *Amazium Theme*.
+      Provides the resources from "Amazium Theme".
       _ icon-menu.png
       _ layout.css
       _ manifest.cfg
