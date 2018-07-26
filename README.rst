@@ -7,7 +7,7 @@ Introduction
 ============
 
 ``diazotheme.amazium`` package provides diazo themes based on the `Amazium CSS framework`_ 
-using the **theming** and **packaging** features available for create Diazo_ theme
+using the **theming** and **packaging** features available for create `Diazo`_ theme
 using `plone.app.theming`_.
 
 ``diazotheme.amazium`` package contains the following diazo implementations: 
@@ -105,7 +105,10 @@ Requirements
 ============
 
 - From the Plone 4.1.x To the Plone 4.3 latest version (https://plone.org/download)
-- The ``plone.app.theming`` package (*You will need enable it to use this package*)
+- The ``plone.app.theming`` package (*You will need enable it via "Add-ons" control 
+  panel to use this package*)
+- The ``diazoframework.amazium`` package (*You will need enable it via "buildout" 
+  configuration to use this package*)
 
 
 Features
@@ -216,7 +219,7 @@ Amazing contributions
 You can find an updated list of package contributors on https://github.com/TH-code/diazotheme.amazium/contributors
 
 .. _`Amazium CSS framework`: http://www.amazium.co.uk/
-.. _`diazoframework.amazium`: https://github.com/TH-code/diazoframework.amazium
-.. _`diazotheme.amazium`: https://github.com/TH-code/diazotheme.amazium
 .. _`Diazo`: http://diazo.org
 .. _`plone.app.theming`: https://pypi.org/project/plone.app.theming/
+.. _`diazoframework.amazium`: https://github.com/TH-code/diazoframework.amazium
+.. _`diazotheme.amazium`: https://github.com/TH-code/diazotheme.amazium
